@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}               
+{% load staticfiles %}
+
+{% block title %}Tomo – {% trans 'Statistika' %}{% endblock %}
+
+ 
+{% block navigation-left %} 
+<a class="navbar-brand topnav" href="{% url 'statistika' %}">{% trans 'Statistika' %}</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="content-section-a tomo-top-section"><div class="container">
+{% filter latex_markdown %}
+
+<h2>Testna stran za statistiko</h2>
+
+<p title="I'm a tooltip">
+Tukaj bo narisan nek graf.
+</p>
+
+{% endfilter %}
+</div></div>
+{% endblock content %}

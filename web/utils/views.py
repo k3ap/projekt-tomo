@@ -37,3 +37,6 @@ def zip_archive(archive_name, files):
     response = HttpResponse(string_buffer.getvalue(), content_type='application/zip')
     response['Content-Disposition'] = 'attachment; filename={0}.zip'.format(archive_name)
     return response
+
+def statistika(request):
+    return render(request, 'statistika_test.html')
