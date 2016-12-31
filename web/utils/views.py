@@ -2,6 +2,7 @@ from io import BytesIO
 import zipfile
 from django.http import HttpResponse
 from django.shortcuts import render
+from courses.models import Course
 
 
 def terms_of_service(request):
