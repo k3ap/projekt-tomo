@@ -5,7 +5,7 @@ from attempts.rest import AttemptViewSet
 from problems.rest import ProblemViewSet
 from courses.rest import CourseViewSet
 from courses.views import homepage
-from utils.views import help, terms_of_service, statistika
+from utils.views import help, terms_of_service
 from users.views import mobile_app_token
 import courses.urls
 import django.contrib.auth.views
@@ -20,7 +20,6 @@ router.register(r'courses', CourseViewSet, base_name='courses')
 urlpatterns = [
     url(r'^$', homepage, name='homepage'),
     url(r'^terms_of_service$', terms_of_service, name='terms_of_service'),
-    url(r'^statistika$', statistika, name='statistika'), ## Moja sprememba
     url(r'^help$', help, name='help'),
     url(r'^help/students$', help, {'special': 'students'}, name='help_students'),
     url(r'^help/teachers$', help, {'special': 'teachers'}, name='help_teachers'),
@@ -34,6 +33,7 @@ urlpatterns = [
     url(r'^api/mobile-app-token/', mobile_app_token, name='mobile_app_token'),
     url(r'^api/', include(router.urls)),
     url(r'^problems/', include('problems.urls')),
+    url(r'^tomo_statistics/', include('tomo_statistics.urls')),
 ]
 
 urlpatterns += courses.urls.urlpatterns
