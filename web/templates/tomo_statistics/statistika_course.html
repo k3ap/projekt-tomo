@@ -11,15 +11,23 @@
 
 <h2>Podatki odvisni od tega v katerem courseu smo. </h2>
 
-<p title="I'm a tooltip">
-Tukaj bo narisan nek graf.
+<p title="Rešenih podnalog">
+Število rešenih podnalog v odvisnosti od uporabnika.
 </p>
 {% endfilter %}
 
-{% for student in students%}
+{% for first_name, last_name, value in my_students %}
+{{last_name}}, {{first_name}} : {{value}}. </p>
+{% endfor %}
+
+{% for set in problem_sets%}
 <p title="I'm a tooltip">
-{{student.last_name}}, {{student.first_name}}.
+Koliko je setov? {{set.title}}
 </p>
 {% endfor %}
+
+Število problemov: {{ number_of_problems}} </p>
+Število vseh podproblemov : {{number_of_problem_parts}} </p>
+
 </div></div>
 {% endblock content %}
