@@ -26,13 +26,25 @@ def test_view(request, course_pk):
                         if attempt.valid:
                             my_students[attempt.user] += 1
 
-    my_students = [(student.last_name, student.first_name, value) for student, value in my_students.items()]
-            
+    my_students = [(value, student.last_name, student.first_name) for student, value in my_students.items()]
+    my_students.sort()
+
+    solved_atleast = []
+    solved = 0
+    student_index = 0
+
+    while solved <= number_of_problem_parts:
+        while student_index < len(my_students) and my_students[student_index][0] < solved:
+            student_index += 1
+        solved_atleast.append((solved, len(my_students) - student_index))
+        solved += 1
+                   
     return render(request, 'tomo_statistics/statistika_course.html',
                   {'students' : students,
-                   'problem_set' : problem_set,
+                   'problem_sets' : problem_sets,
                    'number_of_problems' : number_of_problems,
                    'number_of_problem_parts' : number_of_problem_parts,
                    'my_students' : my_students,
+                   'solved_atleast' : solved_atleast,
                    })
 

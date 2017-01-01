@@ -16,18 +16,22 @@
 </p>
 {% endfilter %}
 
-{% for first_name, last_name, value in my_students %}
+{% for value, first_name, last_name in my_students %}
 {{last_name}}, {{first_name}} : {{value}}. </p>
 {% endfor %}
 
 {% for set in problem_sets%}
 <p title="I'm a tooltip">
-Koliko je setov? {{set.title}}
+- {{set.title}}
 </p>
 {% endfor %}
 
 Število problemov: {{ number_of_problems}} </p>
 Število vseh podproblemov : {{number_of_problem_parts}} </p>
+
+{% for st_resenih, koliko_resevalcev in solved_atleast %}
+{{st_resenih}}, {{koliko_resevalcev}} </p>
+{% endfor %}
 
 </div></div>
 {% endblock content %}
