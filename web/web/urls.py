@@ -9,7 +9,7 @@ from utils.views import help, terms_of_service
 from users.views import mobile_app_token
 import courses.urls
 import django.contrib.auth.views
-
+from django.conf import settings
 
 router = DefaultRouter()
 router.register(r'attempts', AttemptViewSet, base_name='attempts')
@@ -37,3 +37,10 @@ urlpatterns = [
 ]
 
 urlpatterns += courses.urls.urlpatterns
+
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
