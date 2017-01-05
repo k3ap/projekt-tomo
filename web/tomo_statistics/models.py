@@ -8,7 +8,12 @@ class Course(Course):
 
     def statistika(self):
         students = self.student_success()
-        problem_sets = self.problem_sets.all()
+        problem_sets = self.problem_sets.all().prefetch_related(
+            'problems',
+            'problems__parts',
+            'problems__parts__attempts',
+            'problems__parts__attempts__user',
+        )
 
         my_students = {student : 0 for student in students}
 
