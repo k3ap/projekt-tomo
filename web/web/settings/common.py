@@ -19,6 +19,7 @@ INSTALLED_APPS = (
     'courses',
     'taggit',
     'social.apps.django_app.default',
+    'tomo_statistics',
 )
 
 MIDDLEWARE_CLASSES = (
