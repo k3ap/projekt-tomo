@@ -1,5 +1,6 @@
 from django.db import models
 from courses.models import Course
+import json
 
 
 class Course(Course):
@@ -52,4 +53,11 @@ class Course(Course):
            'my_students' : my_students,
            'solved_atleast' : solved_atleast,
        }
-      
+
+    def json_za_graf(self):
+        slovar = self.statistika()
+
+        #podatki = {'solved_atleast' : slovar['solved_atleast']}
+        
+        #return json.dumps(podatki)
+        return slovar['solved_atleast']
