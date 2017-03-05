@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, render_to_response
 from attempts.models import Attempt
 from .models import Course
 from django.http import HttpResponse, JsonResponse
+import json
 
 def main_view(request):
     return render(request, 'tomo_statistics/statistika_test.html')
@@ -12,9 +13,8 @@ def test_view(request, course_pk):
 
 def graph(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)
-    response = JsonResponse(course.json_za_graf())
-    return render(request, 'tomo_statistics/graf.html', course.json_za_graf())
-    #return response
+    json_data = json.dumps(course.statistika()['solved_atleast'])
+    return render(request, 'tomo_statistics/graf.html', {'json_data' : json_data})
 
 def graph_json(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)

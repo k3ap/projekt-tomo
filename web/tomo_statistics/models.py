@@ -35,14 +35,14 @@ class Course(Course):
         my_students = [(value, student.last_name, student.first_name) for student, value in my_students.items()]
         my_students.sort()
 
-        solved_atleast = []
+        solved_atleast = [['Stevilo resenih', 'resilo']]
         solved = 0
         student_index = 0
 
         while solved <= number_of_problem_parts:
             while student_index < len(my_students) and my_students[student_index][0] < solved:
                 student_index += 1
-            solved_atleast.append((solved, len(my_students) - student_index))
+            solved_atleast.append((str(solved), len(my_students) - student_index))
             solved += 1
 
         return {
@@ -55,9 +55,5 @@ class Course(Course):
        }
 
     def json_za_graf(self):
-        slovar = self.statistika()
+        return {'json_data' : self.statistika()['solved_atleast']}
 
-        #podatki = {'solved_atleast' : slovar['solved_atleast']}
-        
-        #return json.dumps(podatki)
-        return slovar['solved_atleast']
