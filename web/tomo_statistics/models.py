@@ -35,7 +35,7 @@ class Course(Course):
         my_students = [(value, student.last_name, student.first_name) for student, value in my_students.items()]
         my_students.sort()
 
-        solved_atleast = [['Stevilo resenih', 'resilo']]
+        solved_atleast = [['Stevilo resenih', 'Število učencev, ki je rešilo toliko nalog']]
         solved = 0
         student_index = 0
 
@@ -67,16 +67,18 @@ class Course(Course):
             problems = problem_set.problems.all()
             for problem in problems:
                 parts = problem.parts.all()
+                correct = 0
+                wrong = 0
                 for part in parts:
-                    correct = 0
-                    wrong = 0
+                    #correct = 0
+                    #wrong = 0
                     for attempt in part.attempts.all():
                         if attempt.valid:
                             correct += 1
                         else:
                             wrong += 1
-                    data.append([str(pr_number), correct, wrong])
-                    pr_number += 1
+                data.append([str(pr_number), correct, wrong])
+                pr_number += 1
         return {
             'correct_submissions' : data }
 
