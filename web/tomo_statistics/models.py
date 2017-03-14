@@ -54,6 +54,34 @@ class Course(Course):
            'solved_atleast' : solved_atleast,
        }
 
-    def json_za_graf(self):
-        return {'json_data' : self.statistika()['solved_atleast']}
+    def problem_success(self):
+        problem_sets = self.problem_sets.all().prefetch_related(
+            'problems',
+            'problems__parts',
+            'problems__parts__attempts',
+        )
+
+        data = [['Pravilnost', 'Pravilne rešitve', 'Napačne rešitve']]
+        pr_number = 0
+        for problem_set in problem_sets:
+            problems = problem_set.problems.all()
+            for problem in problems:
+                parts = problem.parts.all()
+                for part in parts:
+                    correct = 0
+                    wrong = 0
+                    for attempt in part.attempts.all():
+                        if attempt.valid:
+                            correct += 1
+                        else:
+                            wrong += 1
+                    data.append([str(pr_number), correct, wrong])
+                    pr_number += 1
+        return {
+            'correct_submissions' : data }
+
+        
+        
+
+    
 

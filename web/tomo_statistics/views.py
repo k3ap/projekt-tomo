@@ -8,8 +8,9 @@ def main_view(request):
     return render(request, 'tomo_statistics/statistika_test.html')
 
 def test_view(request, course_pk):
-    course = get_object_or_404(Course, pk=course_pk)             
-    return render(request, 'tomo_statistics/statistika_course.html', course.statistika())
+    course = get_object_or_404(Course, pk=course_pk)
+    json_correct = json.dumps(course.problem_success()['correct_submissions'])
+    return render(request, 'tomo_statistics/statistika_course.html', {'json_correct' : json_correct})
 
 def graph(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)
