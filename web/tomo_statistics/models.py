@@ -62,7 +62,9 @@ class Course(Course):
         )
 
         data = [['Pravilnost', 'Pravilne rešitve', 'Napačne rešitve']]
+        data2 = [['Pravilnost', 'Pravilne rešitve', 'Napačne rešitve']]
         pr_number = 0
+        pr_num2 = 0
         for problem_set in problem_sets:
             problems = problem_set.problems.all()
             for problem in problems:
@@ -70,17 +72,22 @@ class Course(Course):
                 correct = 0
                 wrong = 0
                 for part in parts:
-                    #correct = 0
-                    #wrong = 0
+                    cr2 = 0
+                    wr2 = 0
                     for attempt in part.attempts.all():
                         if attempt.valid:
                             correct += 1
+                            cr2 += 1
                         else:
                             wrong += 1
+                            wr2 += 1
+                    data2.append([str(pr_num2), cr2, wr2])
+                    pr_num2 += 1
                 data.append([str(pr_number), correct, wrong])
                 pr_number += 1
         return {
-            'correct_submissions' : data }
+            'correct_submissions' : data,
+            'correct_full_course' : data2}
 
         
         

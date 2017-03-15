@@ -9,8 +9,11 @@ def main_view(request):
 
 def test_view(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)
-    json_correct = json.dumps(course.problem_success()['correct_submissions'])
-    return render(request, 'tomo_statistics/statistika_course.html', {'json_correct' : json_correct})
+    data = course.problem_success()
+    json_correct = json.dumps(data['correct_submissions'])
+    json_correct_full = json.dumps(data['correct_full_course'])
+    return render(request, 'tomo_statistics/statistika_course.html', {'json_correct' : json_correct,
+                                                                      'json_correct_full' : json_correct_full})
 
 def graph(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)
