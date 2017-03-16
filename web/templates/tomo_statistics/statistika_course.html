@@ -34,7 +34,7 @@
         height: 600,
         bar: {groupWidth: "95%"},
         legend: { position: "top" },
-		colors:['#1aff1a','#ff4d4d'],
+		colors:['#878F28','#A92D2D'],
 		isStacked: true,
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values{{problem_set.id}}"));
@@ -49,7 +49,7 @@
 {{pr_number}} :  {{correct}} - {{wrong}}. </p>
 {% endfor %}
 
-</div></div>
 {% endfor %}
+</div></div>
 
 {% endblock content %}
