@@ -61,33 +61,30 @@ class Course(Course):
             'problems__parts__attempts',
         )
 
-        data = [['Pravilnost', 'Pravilne rešitve', 'Napačne rešitve']]
-        data2 = [['Pravilnost', 'Pravilne rešitve', 'Napačne rešitve']]
-        pr_number = 0
-        pr_num2 = 0
+        annotated_problem_sets = []
         for problem_set in problem_sets:
             problems = problem_set.problems.all()
+            problem_set.annotated_problems = []
             for problem in problems:
-                parts = problem.parts.all()
-                correct = 0
-                wrong = 0
-                for part in parts:
-                    cr2 = 0
-                    wr2 = 0
+                problem.annotated_parts = []
+                for part in problem.parts.all():
+                    part.correct = 0
+                    part.wrong = 0
                     for attempt in part.attempts.all():
                         if attempt.valid:
-                            correct += 1
-                            cr2 += 1
+                            part.correct += 1
                         else:
-                            wrong += 1
-                            wr2 += 1
-                    data2.append([str(pr_num2), cr2, wr2])
-                    pr_num2 += 1
-                data.append([str(pr_number), correct, wrong])
-                pr_number += 1
-        return {
-            'correct_submissions' : data,
-            'correct_full_course' : data2}
+                            part.wrong += 1
+                    problem.annotated_parts.append(part)
+                problem_set.annotated_problems.append(problem)
+                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve')]
+                for problem in problem_set.annotated_problems:
+                    rezultati.append((problem.title, 0, 0))
+                    for part in problem.annotated_parts:
+                        rezultati.append(('', part.correct, part.wrong))
+                problem_set.json = json.dumps(rezultati)
+            annotated_problem_sets.append(problem_set)
+        return annotated_problem_sets
 
         
         

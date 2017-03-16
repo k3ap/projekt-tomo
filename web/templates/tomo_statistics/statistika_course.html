@@ -16,16 +16,17 @@
 </p>
 {% endfilter %}
 
-<script>
-	var podatki = {{json_correct|safe}};
-</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+{% for problem_set in annotated_problem_sets %}
 
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
+<h3>{{problem_set.title}}</h3>
+
+
+<script type="text/javascript">
     google.charts.load("current", {packages:['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable(podatki);
+    google.charts.setOnLoadCallback(drawChart{{problem_set.id}});
+    function drawChart{{problem_set.id}}() {
+      var data = google.visualization.arrayToDataTable({{problem_set.json|safe}});
 
       var options = {
         title: "Pravilnost oddanih rešitev za posamezno nalogo",
@@ -36,17 +37,19 @@
 		colors:['#1aff1a','#ff4d4d'],
 		isStacked: true,
       };
-      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values{{problem_set.id}}"));
       chart.draw(data, options);
   }
   </script>
-<div id="columnchart_values" style="width: 1100px; height: 600px;"></div>
+<div id="columnchart_values{{problem_set.id}}" style="width: 1100px; height: 600px;"></div>
 	  
 	  
 	  
-<!-- {% for pr_number, correct, wrong in correct_submissions %}
+{% for pr_number, correct, wrong in correct_submissions %}
 {{pr_number}} :  {{correct}} - {{wrong}}. </p>
-{% endfor %} -->
+{% endfor %}
 
 </div></div>
+{% endfor %}
+
 {% endblock content %}
