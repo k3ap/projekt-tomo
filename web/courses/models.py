@@ -12,6 +12,7 @@ class Group(models.Model):
     title = models.CharField(max_length=60)
     description = models.TextField(blank=True)
     members = models.ManyToManyField(User, blank=True, related_name='group_id', through='AddAMember')
+    #course = models.ForeignKey('Course', blank=True, related_name='group_id')
 
     class Meta:
         ordering = ['title']
