@@ -8,6 +8,34 @@ from taggit.managers import TaggableManager
 from attempts.models import Attempt
 from problems.models import Part
 
+class Group(models.Model):
+    title = models.CharField(max_length=60)
+    description = models.TextField(blank=True)
+    members = models.ManyToManyField(User, blank=True, related_name='group_id', through='AddAMember')
+
+    class Meta:
+        ordering = ['title']
+
+    def __str__(self):
+        return str(self.title)
+
+    def add_member(self, user):
+        add = AddAMember(group=self, user=user)
+        add.save()
+
+    def remove_member(self, user):
+        unadd = AddAMember.objects.get(group=self, user=user)
+        unadd.remove()
+        
+
+class AddAMember(models.Model):
+    group = models.ForeignKey(Group, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ['user', 'group']
+        unique_together = ['group', 'user']    
+
 
 class Course(models.Model):
     title = models.CharField(max_length=70)
