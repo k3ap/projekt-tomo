@@ -233,3 +233,481 @@ NameError: name 'role' is not defined
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Internal Server Error: /admin/users/user/add/
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 541, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\sites.py", line 244, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\views\decorators\debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\admin.py", line 128, in add_view
+    extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1437, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\admin\options.py", line 1370, in changeform_view
+    if form.is_valid():
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 161, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 153, in errors
+    self.full_clean()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 362, in full_clean
+    self._clean_fields()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\forms\forms.py", line 383, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\users\admin.py", line 18, in clean_username
+    raise forms.ValidationError(self.error_messages['duplicate_username'])
+KeyError: 'duplicate_username'
+Not Found: /favicon.ico
