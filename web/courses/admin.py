@@ -1,12 +1,16 @@
 from django.contrib import admin
-from .models import Course, ProblemSet, StudentEnrollment, Group, AddAMember
+from .models import Course, ProblemSet, StudentEnrollment, Group
 
 
 class StudentEnrollmentInline(admin.StackedInline):
     model = StudentEnrollment
 
-class AddAMemberInline(admin.StackedInline):
-    model = AddAMember
+class GroupInline(admin.StackedInline):
+    model = Group
+    list_display = ['title']
+    filter_horizontal = (
+        'members',
+    )
 
 
 class CourseAdmin(admin.ModelAdmin):
@@ -16,6 +20,7 @@ class CourseAdmin(admin.ModelAdmin):
     )
     inlines = (
         StudentEnrollmentInline,
+        GroupInline,
     )
 
 
@@ -39,15 +44,5 @@ class ProblemSetAdmin(admin.ModelAdmin):
         'description',
     )
 
-class GroupAdmin(admin.ModelAdmin):
-    list_display = ['title']
-    filter_horizontal = (
-        'members',
-    )
-    inlines = (
-        AddAMemberInline,
-    )
-
 admin.site.register(Course, CourseAdmin)
 admin.site.register(ProblemSet, ProblemSetAdmin)
-admin.site.register(Group, GroupAdmin)
