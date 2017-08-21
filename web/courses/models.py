@@ -203,11 +203,10 @@ class ProblemSet(OrderWithRespectToMixin, models.Model):
         return archive_name, files
 
     def results_archive(self, user):
-        students = self.course.observed_students()
+        students = self.course.students.all()
         user_ids = set()
         attempt_dict = {}
-        attempts = Attempt.objects.filter(user__in=students,
-                                          part__problem__problem_set=self)
+        attempts = Attempt.objects.filter(part__problem__problem_set=self)
         for attempt in attempts:
             user_id = attempt.user_id
             user_ids.add(user_id)

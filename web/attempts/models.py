@@ -36,8 +36,9 @@ class Attempt(models.Model):
     valid = models.BooleanField(default=False)
     feedback = models.TextField(default='[]', validators=[is_json_string_list])
     history = HistoricalRecords()
+    submission_date = models.DateTimeField(auto_now=True)
     objects = AttemptQuerySet.as_manager()
-
+    
     class Meta:
         unique_together = ('user', 'part')
 

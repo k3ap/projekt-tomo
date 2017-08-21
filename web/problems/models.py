@@ -1,3 +1,4 @@
+from copy import deepcopy
 import json
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -9,6 +10,7 @@ from simple_history.models import HistoricalRecords
 from utils import is_json_string_list, truncate
 from utils.models import OrderWithRespectToMixin
 from taggit.managers import TaggableManager
+from django.core import signing
 
 
 class Problem(OrderWithRespectToMixin, models.Model):
@@ -19,8 +21,13 @@ class Problem(OrderWithRespectToMixin, models.Model):
     tags = TaggableManager(blank=True)
     language = models.CharField(max_length=8, choices=(
         ('python', 'Python 3'),
-        ('octave', 'Octave')), default='python')
-    EXTENSIONS = {'python': 'py', 'octave': 'm'}
+        ('octave', 'Octave'),
+        ('r', 'R')), default='python')
+    verify_attempt_tokens = models.BooleanField(default=True)
+    EXTENSIONS = {'python': 'py', 'octave': 'm', 'r': 'r'}
+    MIMETYPES = {'python': 'text/x-python',
+                 'octave': 'text/x-octave',
+                 'r': 'text/x-R'}
     class Meta:
         order_with_respect_to = 'problem_set'
 
@@ -42,7 +49,7 @@ class Problem(OrderWithRespectToMixin, models.Model):
     def attempt_file(self, user):
         authentication_token = Token.objects.get(user=user)
         solutions = self.user_solutions(user)
-        parts = [(part, solutions.get(part.id, part.template)) for part in self.parts.all()]
+        parts = [(part, solutions.get(part.id, part.template), part.attempt_token(user)) for part in self.parts.all()]
         url = settings.SUBMISSION_URL + reverse('attempts-submit')
         problem_slug = slugify(self.title).replace("-", "_")
         extension = self.EXTENSIONS[self.language]
@@ -81,7 +88,7 @@ class Problem(OrderWithRespectToMixin, models.Model):
         })
         return filename, contents
 
-    def attempts_by_user(self):
+    def attempts_by_user(self, active_only=True):
         attempts = {}
         for part in self.parts.all():
             for attempt in part.attempts.all():
@@ -92,7 +99,10 @@ class Problem(OrderWithRespectToMixin, models.Model):
         for student in self.problem_set.course.students.all():
             if student not in attempts:
                 attempts[student] = {}
-        observed_students = list(self.problem_set.course.observed_students())
+        observed_students = self.problem_set.course.observed_students()
+        if active_only:
+            observed_students = observed_students.filter(attempts__part__problem=self).distinct()
+        observed_students = list(observed_students)
         for user in observed_students:
             user.valid = user.invalid = user.empty = 0
             user.these_attempts = [attempts[user].get(part) for part in self.parts.all()]
@@ -106,16 +116,16 @@ class Problem(OrderWithRespectToMixin, models.Model):
         return observed_students
 
     def copy_to(self, problem_set):
-        new_problem = Problem()
-        new_problem.title = self.title
-        new_problem.description = self.description
+        new_problem = deepcopy(self)
+        new_problem.pk = None
         new_problem.problem_set = problem_set
-        new_problem.tags = self.tags
         new_problem.save()
         for part in self.parts.all():
             part.copy_to(new_problem)
         return new_problem
 
+    def content_type(self):
+        return self.MIMETYPES[self.language]
 
 
 class Part(OrderWithRespectToMixin, models.Model):
@@ -173,11 +183,14 @@ class Part(OrderWithRespectToMixin, models.Model):
         }
 
     def copy_to(self, problem):
-        new_part = Part()
+        new_part = deepcopy(self)
+        new_part.pk = None
         new_part.problem = problem
-        new_part.description = self.description
-        new_part.solution = self.solution
-        new_part.validation = self.validation
-        new_part.secret = self.secret
         new_part.save()
         return new_part
+
+    def attempt_token(self, user):
+        return signing.dumps({
+            'part': self.pk,
+            'user': user.pk,
+        })
