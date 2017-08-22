@@ -151,7 +151,8 @@
               <h5>{{ forloop.counter }}. {% trans "part" %}</h5>
               <p>{{ part.description|latex_markdown }}</p>
 			  {% if show_teacher_forms %}
-			  <a href="/problems/view_all/{{part.id}}"> Preglej vse rešitve učencev </a>
+			  <a href="/problems/view_all/{{part.id}}"> Preglej vse rešitve učencev </a><br>
+			  <a href='problem/{{problem.id}}/casovnica'>Časovnica oddaj</a>
 			  {% endif %}
             </li>
             {% endfor %}

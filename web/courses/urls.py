@@ -61,4 +61,7 @@ urlpatterns = [
     url(r'^course/(?P<course_pk>\d+)/progress/(?P<user_pk>\d+)/$',
         views.course_progress,
         name='course_progress'),
+    url(r'^problem_set/(?P<problem_set_pk>\d+)/problem/(?P<problem_pk>\d+)',
+        views.solution_timeline,
+        name='solution_timeline')
 ]

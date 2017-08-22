@@ -1549,3 +1549,86 @@ django.db.utils.ProgrammingError: missing FROM-clause entry for table "user"
 LINE 1: ...se_id" = 17 AND U1."observed" = true))) ORDER BY ("user".get...
                                                              ^
 
+Not Found: /problem_set/81/šass
+Not Found: /problem_set/81/šass
+Not Found: /problem_set/81/šass
+Not Found: /problem_set/81/81/problem/907/casovnica
+Not Found: /problem_set/81/81/problem/907/casovnica
+Not Found: /problem_set/81/81/problem/907/casovnica
+Not Found: /problem_set/81/problem/907/casovnica
+Not Found: /problem_set/81/problem/907/casovnica
+Not Found: /problem_set/278/problem/1709/casovnica
+Not Found: /problem_set/278/problem/1712/casovnica
+Not Found: /problem_set/278/problem/1712/casovnica
+Internal Server Error: /problem_set/278/problem/1712/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 235, in solution_timeline
+    return HttpResponse('DELA')
+NameError: name 'HttpResponse' is not defined
+Internal Server Error: /problem_set/114/problem/1328/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 236, in solution_timeline
+    problem_set = get_object_or_404('ProblemSet', pk = problem_set_pk)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 153, in get_object_or_404
+    queryset = _get_queryset(klass)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 138, in _get_queryset
+    "Manager, or QuerySet" % klass__name)
+ValueError: Object is of type 'str', but must be a Django Model, Manager, or QuerySet
+Internal Server Error: /problem_set/114/problem/1328/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 240, in solution_timeline
+    return HttpResponse('DELA' + ' ' + str(len(histori_attempts)))
+NameError: name 'histori_attempts' is not defined
+Internal Server Error: /problem_set/114/problem/1328/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 236, in solution_timeline
+    problem = get_objects_or_404(Problem, pk=problem_pk)
+NameError: name 'get_objects_or_404' is not defined
+Internal Server Error: /problem_set/114/problem/1328/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 236, in solution_timeline
+    problem = get_object_or_404(Problem, pk=problem_pk)
+NameError: name 'Problem' is not defined
+Not Found: /problem_set/114/problem/1328/casovnica
+Not Found: /problem_set/114/problem/1328/casovnica
+Internal Server Error: /problem_set/114/problem/515/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 238, in solution_timeline
+    parts = problems.parts.all()
+NameError: name 'problems' is not defined

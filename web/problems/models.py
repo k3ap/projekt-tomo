@@ -11,6 +11,8 @@ from utils import is_json_string_list, truncate
 from utils.models import OrderWithRespectToMixin
 from taggit.managers import TaggableManager
 from django.core import signing
+from attempts.models import HistoricalAttempt
+from collections import defaultdict
 
 
 class Problem(OrderWithRespectToMixin, models.Model):
@@ -126,6 +128,31 @@ class Problem(OrderWithRespectToMixin, models.Model):
 
     def content_type(self):
         return self.MIMETYPES[self.language]
+
+    def timeline(self):
+
+        def get_index(part, part_list):
+            for st,p in enumerate(part_list):
+                if p.id == part.id:
+                    return st
+            return None
+        
+        course = self.problem_set.course
+        students = course.observed_students()
+        parts = self.parts.all()
+        historic_attempts = HistoricalAttempt.objects.filter(
+            part__id__in=parts).filter(user__id__in=students)
+        student_data = defaultdict()
+        for student in students:
+            check_times = []
+            attempts = historic_attempts.filter(user__id=student.id).order_by('submission_date')
+            stanje = [False]*len(parts)
+            for attempt in attempts:
+                indeks = get_index(attempt.part, parts)
+                stanje[indeks] = attempt.valid
+                check_times.append((attempt.submission_date, stanje[:]))
+            student_data[student] = check_times
+        return student_data
 
 
 class Part(OrderWithRespectToMixin, models.Model):
