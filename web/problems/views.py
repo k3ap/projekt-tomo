@@ -167,12 +167,17 @@ def all_solutions_to_part(request, part_pk):
     students = course.observed_students()
     attempts = Attempt.objects.filter(part__id=part_pk).filter(user__id__in=students)
 
+    for st, podnaloga in enumerate(problem.parts.all()):
+        if podnaloga.id == part.id:
+            stevilka_podnaloge = st + 1
+
     return render(request, 'problems/all_solutions.html',
                   {
                       'part': part,
                       'problem' : problem,
                       'problem_set' : problem_set,
                       'attempts' : attempts,
+                      'part_number' : stevilka_podnaloge,
                     }
                   )
 
