@@ -56,6 +56,9 @@ class User(AbstractUser):
         return self.can_view_problem(problem) and \
                (self == student or self.is_teacher(problem.problem_set.course))
 
+    def get_full_name(self):
+        return self.first_name + ' ' + self.last_name
+
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):

@@ -165,7 +165,7 @@ def all_solutions_to_part(request, part_pk):
     problem_set = problem.problem_set
     course = problem_set.course
     students = course.observed_students()
-    attempts = Attempt.objects.filter(part__id=part_pk).filter(user__id__in=students)
+    attempts = Attempt.objects.filter(part__id=part_pk).filter(user__id__in=students).order_by('-user')
 
     for st, podnaloga in enumerate(problem.parts.all()):
         if podnaloga.id == part.id:
