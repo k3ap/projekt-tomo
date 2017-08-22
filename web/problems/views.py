@@ -3,9 +3,10 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.forms import Form, IntegerField
 from django.http import HttpResponse
-from problems.models import Problem
-from courses.models import ProblemSet
+from problems.models import Problem, Part
+from courses.models import ProblemSet, Course
 from users.models import User
+from attempts.models import Attempt
 from utils.views import plain_text
 from utils import verify
 
@@ -127,7 +128,7 @@ def copy_form(request, problem_pk):
             {
                 'form': form,
                 'courses': courses,
-                'problem': problem,
+                'problem': problem
             }
         )
 
@@ -156,3 +157,35 @@ def problem_solution(request, problem_pk, user_pk):
                       'is_teacher': request.user.can_edit_problem_set(problem_set),
                   }
                   )
+
+@login_required
+def all_solutions_to_part(request, part_pk):
+    part = get_object_or_404(Part, pk=part_pk)
+    problem = part.problem
+    problem_set = problem.problem_set
+    course = problem_set.course
+    students = course.observed_students()
+    attempts = Attempt.objects.filter(part__id=part_pk).filter(user__id__in=students)
+
+    return render(request, 'problems/all_solutions.html',
+                  {
+                      'part': part,
+                      'problem' : problem,
+                      'problem_set' : problem_set,
+                      'attempts' : attempts,
+                    }
+                  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+

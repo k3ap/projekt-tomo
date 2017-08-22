@@ -975,3 +975,473 @@ django.db.utils.ProgrammingError: column attempts_attempt.submission_date does n
 LINE 1: ..._attempt"."valid", "attempts_attempt"."feedback", "attempts_...
                                                              ^
 
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Not Found: /problem_set/81/{% url 'all_solutions_to_part' part.id}
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 163, in all_solutions_to_part
+    attempts = Attempts.objects.filter(part__id=part_pk)
+NameError: name 'Attempts' is not defined
+Not Found: /problems//view_all/907
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 163, in all_solutions_to_part
+    part = get_object_or_404(Part, pk=part_pk)
+NameError: name 'Part' is not defined
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 164, in all_solutions_to_part
+    return HttpResponse('DELA' + str(part_pk) + ' ' + str(len(attempts)))
+NameError: name 'attempts' is not defined
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 167, in all_solutions_to_part
+    return HttpResponse('DELA' + str(part_pk) + ' ' + str(course_pk) + ' ' + len(students))
+TypeError: Can't convert 'int' object to str implicitly
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 166, in all_solutions_to_part
+    problem = get_object_or_404(Problem, pk=part.problem)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 155, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 378, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1203, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1099, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 19, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 57, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 744, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 976, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Problem'
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 166, in all_solutions_to_part
+    problem = get_object_or_404(Problem, pk=part.problem)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 155, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 378, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1203, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1099, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 19, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 57, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 744, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 976, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'Problem'
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 167, in all_solutions_to_part
+    problem_set = get_object_or_404(Problem_set, pk=problem.problem_set.id)
+NameError: name 'Problem_set' is not defined
+Internal Server Error: /problems/view_all/907
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 180, in all_solutions_to_part
+    + ' ' + str(len(attempts)))
+NameError: name 'course_pk' is not defined
+Internal Server Error: /problems/view_all/935
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'attempt.user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 175, in all_solutions_to_part
+    'attempts' : attempts,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 566, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until]),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 35: 'attempt.user', expected 'empty' ali 'endfor'. Did you forget to register or load this tag?
+Internal Server Error: /problems/view_all/935
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 175, in all_solutions_to_part
+    'attempts' : attempts,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 1042, in do_if
+    nodelist = parser.parse(('endif',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 885, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 601, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 701, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(',')' from 'attempt.feedback.split(',')'
+Internal Server Error: /problems/view_all/935
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 178, in all_solutions_to_part
+    'attempts' : attempts,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 1042, in do_if
+    nodelist = parser.parse(('endif',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 885, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 601, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 701, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(',')' from 'attempt.feedback.split(',')'
+Internal Server Error: /problems/view_all/935
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\smartif.py", line 177, in translate_token
+    op = OPERATORS[token]
+KeyError: '["[]"]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 178, in all_solutions_to_part
+    'attempts' : attempts,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 1027, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 959, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 962, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 601, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 701, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '["[]"]' from '["[]"]'
+Internal Server Error: /problems/view_all/935
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 178, in all_solutions_to_part
+    'attempts' : attempts,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 1042, in do_if
+    nodelist = parser.parse(('endif',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 487, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 485, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 601, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 695, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 607, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'json'
