@@ -52,7 +52,7 @@
                     <div class="inside inside-full-height">
                       <div class="content">
                         <div class="tomo-solution-code-user">
-						Čas oddaje: {{part.attempt.created}}
+						Čas oddaje: {{part.attempt.submission_date}}
                           {% if part.attempt %}
                           <div class="tomo-pre">{{ part.attempt.solution }}</div>
                           {% else %}
@@ -73,6 +73,7 @@
                     <div class="content">
                       <div class="tomo-solution-code-official">
                         {% if problem_set.solution_visibility == problem_set.SOLUTION_VISIBLE or is_teacher %}
+						<br>
                         <div class="tomo-pre">{{ part.solution }}</div>
 
                         {% elif problem_set.solution_visibility == problem_set.SOLUTION_HIDDEN %}
