@@ -235,9 +235,13 @@ def problem_set_results(request, problem_set_pk):
 @login_required
 def solution_timeline(request, problem_set_pk, problem_pk):
     problem = get_object_or_404(Problem, pk=problem_pk)
-    S = problem.timeline()    
-    
-    return HttpResponse('DELA' + ' ' + str(S))
+    problem_set = problem.problem_set
+    data = problem.timeline()    
+    return render(request, 'courses/problem_timeline.html',
+                  {
+                      'students' : data,
+                      'problem' : problem,
+                      'problem_set' : problem_set})
 
 
 

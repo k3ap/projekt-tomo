@@ -18,30 +18,31 @@
 {% block content %}
 <div class="content-section-a tomo-overview-student">
   <div class="container">
-    <h2>{{ problem_set.title }}</h2>
+    <h2>{{ problem_set.title }} - {{problem.title}}</h2>
     <div class="row">
-      {% for problem in problem_set.problems.all %}
+      {% for student, times in students.items %}
       <div class="col-md-4">
-        <h3 id="{{ problem.anchor }}"><a href="{{ problem.get_absolute_url }}">{{ problem.title }}</a></h3>
+        <h3> <a href="{% url 'course_progress' problem.problem_set.course.pk student.pk %}"> {{ student.get_full_name }}</a></h3>
       </div>
       <div class="col-md-8">
         <table class="table table-condensed">
           <tbody>
-            {% for observed_user in problem.attempts_by_user %}
+            {% for time,attempts in times %}
             <tr>
               <td>
-                <a href="{% url 'course_progress' problem.problem_set.course.pk observed_user.pk %}"
-                   data-toggle="tooltip"
-                   title="{{ observed_user.valid }} {% trans "valid" %} / {{ observed_user.invalid }} {% trans "invalid" %} / {{ observed_user.empty }} {% trans "empty" %} ">
-                   {{ observed_user.get_full_name }}</a>
+                  {{ time }}
               </td>
               <td width='60%'>
-                {% for attempt in observed_user.these_attempts %}
-                <a href="{% url 'problem_solution' problem.pk observed_user.pk %}">
+                {% for attempt in attempts %}
+				{% if not attempt %}
+					<a href="{% url 'problem_solution' problem.pk student.pk %}"> <i class="color1 fa fa-circle fa-lg"></i> </a>
+				{% else %}
+                <a href="{% url 'problem_solution' problem.pk student.pk %}">
                   {% if attempt.valid %}<i class="color5 fa fa-circle fa-lg"></i>
                   {% elif attempt %}<i class="color3 fa fa-circle fa-lg"></i>
                   {% else %}<i class="color1 fa fa-circle fa-lg"></i>
                   {% endif %}
+				 {% endif %}
                 </a>
                 {% endfor %}
               </td>

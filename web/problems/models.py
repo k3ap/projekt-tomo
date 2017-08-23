@@ -13,6 +13,7 @@ from taggit.managers import TaggableManager
 from django.core import signing
 from attempts.models import HistoricalAttempt
 from collections import defaultdict
+from django.utils import timezone
 
 
 class Problem(OrderWithRespectToMixin, models.Model):
@@ -149,8 +150,10 @@ class Problem(OrderWithRespectToMixin, models.Model):
             stanje = [False]*len(parts)
             for attempt in attempts:
                 indeks = get_index(attempt.part, parts)
-                stanje[indeks] = attempt.valid
+                stanje[indeks] = attempt
                 check_times.append((attempt.submission_date, stanje[:]))
+            if len(check_times) == 0:
+                check_times.append((timezone.now, stanje[:]))
             student_data[student] = check_times
         return student_data
 
