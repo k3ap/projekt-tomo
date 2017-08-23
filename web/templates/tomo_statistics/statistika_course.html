@@ -9,11 +9,8 @@
 <div class="content-section-a tomo-top-section"><div class="container">
 {% filter latex_markdown %}
 
-<h2>Podatki odvisni od tega v katerem courseu smo. </h2>
-
-<p title="Rešenih podnalog">
-Število rešenih podnalog v odvisnosti od uporabnika.
-</p>
+<h2> {{course.title}} </h2>
+<p><h5> Število pravilnih/napačnih oddaj za posamezno podnalogo </h5></p>
 {% endfilter %}
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -42,12 +39,6 @@
   }
   </script>
 <div id="columnchart_values{{problem_set.id}}" style="width: 1100px; height: 600px;"></div>
-	  
-	  
-	  
-{% for pr_number, correct, wrong in correct_submissions %}
-{{pr_number}} :  {{correct}} - {{wrong}}. </p>
-{% endfor %}
 
 {% endfor %}
 </div></div>
