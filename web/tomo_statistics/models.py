@@ -60,7 +60,7 @@ class Course(Course):
             'problems__parts',
             'problems__parts__attempts',
         )
-
+        students = self.observed_students()
         annotated_problem_sets = []
         for problem_set in problem_sets:
             problems = problem_set.problems.all()
@@ -75,13 +75,14 @@ class Course(Course):
                             part.correct += 1
                         else:
                             part.wrong += 1
+                    part.empty = max(0, len(students) - part.correct - part.wrong)
                     problem.annotated_parts.append(part)
                 problem_set.annotated_problems.append(problem)
-                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve')]
+                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve', 'Prazne rešitve')]
                 for problem in problem_set.annotated_problems:
-                    rezultati.append((problem.title, 0, 0))
+                    rezultati.append((problem.title, 0, 0, 0))
                     for part in problem.annotated_parts:
-                        rezultati.append(('', part.correct, part.wrong))
+                        rezultati.append(('', part.correct, part.wrong, part.empty))
                 problem_set.json = json.dumps(rezultati)
             annotated_problem_sets.append(problem_set)
         return annotated_problem_sets
