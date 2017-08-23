@@ -2344,3 +2344,1449 @@ Traceback (most recent call last):
   File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution' with arguments '(431, '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['problems/(?P<problem_pk>\\d+)/solutions/(?P<user_pk>\\d+)$']
+Internal Server Error: /problem_set/292/problem/835/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(835, 512, '')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(835, 512, '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['problems/(?P<problem_pk>\\d+)/solutions/(?P<user_pk>\\d+)/(?P<hist_attempt_pk>\\d+)$']
+Internal Server Error: /problem_set/292/problem/835/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 566, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until]),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 42: 'endif', expected 'empty' ali 'endfor'. Did you forget to register or load this tag?
+Internal Server Error: /problem_set/275/problem/588/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 566, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until]),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 42: 'endif', expected 'empty' ali 'endfor'. Did you forget to register or load this tag?
+Internal Server Error: /problem_set/275/problem/588/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 566, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until]),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 42: 'endif', expected 'empty' ali 'endfor'. Did you forget to register or load this tag?
+Internal Server Error: /problem_set/62/problem/431/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loaders\base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 516, in parse
+    raise self.error(token, e)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 886, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 566, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until]),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 42: 'endif', expected 'empty' ali 'endfor'. Did you forget to register or load this tag?
+Internal Server Error: /problem_set/62/problem/431/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(431, 529, '')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(431, 529, '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['problems/(?P<problem_pk>\\d+)/solutions/(?P<user_pk>\\d+)/(?P<hist_attempt_pk>\\d+)$']
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 187, in problem_solution_at_time
+    problem = get_object_or_404(Problem, ppk = problem_pk)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 155, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 378, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1149, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1035, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1330, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'ppk' into field. Choices are: _order, description, id, language, parts, problem_set, problem_set_id, tagged_items, tags, title, verify_attempt_tokens
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 196, in problem_solution_at_time
+    if len(viable) == 0:
+TypeError: object of type 'HistoricalAttempt' has no len()
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 195, in problem_solution_at_time
+    viable = veljavne_oddaje.filter(part__id = part.id).order_by('submission_date').latest()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 544, in latest
+    return self._earliest_or_latest(field_name=field_name, direction="-")
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 538, in _earliest_or_latest
+    return obj.get()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 387, in get
+    self.model._meta.object_name
+attempts.models.DoesNotExist: HistoricalAttempt matching query does not exist.
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 195, in problem_solution_at_time
+    viable = veljavne_oddaje.filter(part__id = part.id).order_by('submission_date')[-1]
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 277, in __getitem__
+    "Negative indexing is not supported."
+AssertionError: Negative indexing is not supported.
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 195, in problem_solution_at_time
+    viable = veljavne_oddaje.filter(part__id = part.id).latest('submission_date')
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 544, in latest
+    return self._earliest_or_latest(field_name=field_name, direction="-")
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 538, in _earliest_or_latest
+    return obj.get()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 387, in get
+    self.model._meta.object_name
+attempts.models.DoesNotExist: HistoricalAttempt matching query does not exist.
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 195, in problem_solution_at_time
+    viable = veljavne_oddaje.filter(part__id = part.pk).latest('submission_date')
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 544, in latest
+    return self._earliest_or_latest(field_name=field_name, direction="-")
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 538, in _earliest_or_latest
+    return obj.get()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 387, in get
+    self.model._meta.object_name
+attempts.models.DoesNotExist: HistoricalAttempt matching query does not exist.
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 195, in problem_solution_at_time
+    viable = veljavne_oddaje.filter(part__pk = part.pk).latest('submission_date')
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 544, in latest
+    return self._earliest_or_latest(field_name=field_name, direction="-")
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 538, in _earliest_or_latest
+    return obj.get()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 387, in get
+    self.model._meta.object_name
+attempts.models.DoesNotExist: HistoricalAttempt matching query does not exist.
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 195, in problem_solution_at_time
+    viable = veljavne_oddaje.filter(part__pk = part.pk).latest('submission_date')
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 544, in latest
+    return self._earliest_or_latest(field_name=field_name, direction="-")
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 538, in _earliest_or_latest
+    return obj.get()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 387, in get
+    self.model._meta.object_name
+attempts.models.DoesNotExist: HistoricalAttempt matching query does not exist.
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 199, in problem_solution_at_time
+    'time' : hist_attempt_pk.submission_date,
+AttributeError: 'str' object has no attribute 'submission_date'
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 202, in problem_solution_at_time
+    'problem_set' : problem_set,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 43, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: problems/solution_at_time.html
+Internal Server Error: /problem_set/62/problem/276/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problem_set/62/problem/276/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problem_set/62/problem/276/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 190, in problem_solution_at_time
+    submission_date__lte=time).filter(
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1203, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1099, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 19, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 57, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 744, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 1440, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 1423, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ["'183286' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."]
+Internal Server Error: /problem_set/62/problem/276/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problems/276/solutions/664/183286
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 190, in problem_solution_at_time
+    submission_date__lte=time).filter(
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1203, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\sql\query.py", line 1099, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 19, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\lookups.py", line 57, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 744, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 1440, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\db\models\fields\__init__.py", line 1423, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ["'183286' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format."]
+Internal Server Error: /problem_set/62/problem/276/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problem_set/62/problem/276/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(276, 664, datetime.datetime(2016, 4, 27, 9, 52, 27, 975631, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problem_set/62/problem/431/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(431, 664, datetime.datetime(2016, 4, 27, 9, 42, 49, 245363, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(431, 664, datetime.datetime(2016, 4, 27, 9, 42, 49, 245363, tzinfo=<UTC>))' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problem_set/62/problem/431/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(431, 664, 183280)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(431, 664, 183280)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problem_set/62/problem/431/casovnica
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'web.problem_solution_at_time' with arguments '(431, 664, 183280)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\courses\views.py", line 244, in solution_timeline
+    'problem_set' : problem_set})
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\backends\django.py", line 95, in render
+    return self.template.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 206, in render
+    return self._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\test\utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\base.py", line 959, in render_annotated
+    return self.render(context)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\utils\six.py", line 686, in reraise
+    raise value
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\template\defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'problem_solution_at_time' with arguments '(431, 664, 183280)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /problems/431/solutions/652/248267
+Traceback (most recent call last):
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\core\handlers\base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Samo\AppData\Local\Programs\Python\Python35\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Samo\Desktop\projekt-tomo\projekt-tomo\web\problems\views.py", line 202, in problem_solution_at_time
+    'time' : time,
+NameError: name 'time' is not defined
+Not Found: /avtomobili/

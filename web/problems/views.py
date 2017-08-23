@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from problems.models import Problem, Part
 from courses.models import ProblemSet, Course
 from users.models import User
-from attempts.models import Attempt
+from attempts.models import Attempt, HistoricalAttempt
 from utils.views import plain_text
 from utils import verify
 
@@ -180,6 +180,31 @@ def all_solutions_to_part(request, part_pk):
                       'part_number' : stevilka_podnaloge,
                     }
                   )
+
+@login_required
+def problem_solution_at_time(request, problem_pk, user_pk, hist_attempt_pk):
+    hist_attempt = get_object_or_404(HistoricalAttempt, pk=hist_attempt_pk)
+    problem = get_object_or_404(Problem, pk = problem_pk)
+    problem_set = problem.problem_set
+    parts = problem.parts.all()
+    veljavne_oddaje = HistoricalAttempt.objects.filter(user__id=user_pk).filter(
+        submission_date__lte=hist_attempt.submission_date).filter(
+            part__id__in=parts)
+    podnaloge = dict()
+    for st, part in enumerate(parts):
+        viable = veljavne_oddaje.filter(part__id = part.id)
+        if viable:
+            podnaloge[st] = viable.latest('submission_date')
+        else:
+            podnaloge[st] = False
+    return render(request, 'problems/solution_at_time.html',
+                  {
+                      'time' : hist_attempt.submission_date,
+                      'data' : podnaloge,
+                      'problem' : problem,
+                      'problem_set' : problem_set,
+                      'is_teacher': request.user.can_edit_problem_set(problem_set),
+                      })
 
 
 

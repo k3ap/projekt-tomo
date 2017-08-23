@@ -151,7 +151,7 @@ class Problem(OrderWithRespectToMixin, models.Model):
             for attempt in attempts:
                 indeks = get_index(attempt.part, parts)
                 stanje[indeks] = attempt
-                check_times.append((attempt.submission_date, stanje[:]))
+                check_times.append((attempt, stanje[:]))
             if len(check_times) == 0:
                 check_times.append((timezone.now, stanje[:]))
             student_data[student] = check_times
