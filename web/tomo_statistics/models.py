@@ -1,6 +1,7 @@
 from django.db import models
 from courses.models import Course
 import json
+from attempts.models import Attempt
 
 
 class Course(Course):
@@ -75,17 +76,40 @@ class Course(Course):
                             part.correct += 1
                         else:
                             part.wrong += 1
-                    part.empty = max(0, len(students) - part.correct - part.wrong)
                     problem.annotated_parts.append(part)
                 problem_set.annotated_problems.append(problem)
-                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve', 'Prazne rešitve')]
+                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve')]
                 for problem in problem_set.annotated_problems:
-                    rezultati.append((problem.title, 0, 0, 0))
+                    rezultati.append((problem.title, 0, 0))
                     for part in problem.annotated_parts:
-                        rezultati.append(('', part.correct, part.wrong, part.empty))
+                        rezultati.append(('', part.correct, part.wrong))
                 problem_set.json = json.dumps(rezultati)
             annotated_problem_sets.append(problem_set)
         return annotated_problem_sets
+
+    def problem_success_2(self):
+        students = self.observed_students()
+        attempts = Attempt.objects.filter(user__id__in=students).filter(
+            part__problem__problem_set__course__id = self.id)
+        success = attempts.problem_set_statistics()
+        annotated_problem_sets = []
+        for problem_set in self.problem_sets.all():
+            try:
+                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve')]
+                for problem in success[problem_set]:
+                    rezultati.append((problem.title, 0, 0))
+                    for part in success[problem_set][problem]:
+                        rezultati.append(('', success[problem_set][problem][part]['valid'],
+                                         success[problem_set][problem][part]['invalid']))
+                problem_set.json = json.dumps(rezultati)
+                annotated_problem_sets.append(problem_set)
+            except:
+                pass
+        return annotated_problem_sets
+            
+        
+                
+        
 
         
         

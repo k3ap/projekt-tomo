@@ -7,7 +7,7 @@ import json
 def course_graphs(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)
     return render(request, 'tomo_statistics/statistika_course.html', {
-        'annotated_problem_sets' : course.problem_success(),
+        'annotated_problem_sets' : course.problem_success_2(),
         'course' : course,
     })
 
