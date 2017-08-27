@@ -21,4 +21,5 @@ def course_graphs_active(request, course_pk, days):
     return render(request, 'tomo_statistics/statistika_course.html', {
         'annotated_problem_sets' : course.active(days=days),
         'course' : course,
+        'days' : days,
     })

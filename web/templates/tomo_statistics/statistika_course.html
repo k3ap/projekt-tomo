@@ -25,6 +25,8 @@
 <li><a href='{% url "course_graphs_active" course.pk 365%}'> Aktivni zadnje leto </a> <br>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+{% if annotated_problem_sets %}
 {% for problem_set in annotated_problem_sets %}
 
 <h3>{{problem_set.title}}</h3>
@@ -52,6 +54,9 @@
 <div id="columnchart_values{{problem_set.id}}" style="width: 1100px; height: 600px;"></div>
 
 {% endfor %}
+{% else %}
+	<h4><i class="color1">  V zadnjih {{days}} dneh ni bil aktiven noben učenec iz razreda </h4></i> 
+{% endif %}
 </div></div>
 
 {% endblock content %}
