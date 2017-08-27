@@ -11,7 +11,7 @@ from problems.models import Part
 
 class Group(models.Model):
     title = models.CharField(max_length=60)
-    course = models.ForeignKey('courses.Course', on_delete=models.CASCADE)
+    course = models.ForeignKey('courses.Course', on_delete=models.CASCADE, related_name='groups')
     members = models.ManyToManyField(User, blank=True, related_name='course_groups')
 
     class Meta:

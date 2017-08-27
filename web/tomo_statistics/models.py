@@ -2,6 +2,7 @@ from django.db import models
 from courses.models import Course
 import json
 from attempts.models import Attempt
+from datetime import datetime, timezone
 
 
 class Course(Course):
@@ -88,6 +89,10 @@ class Course(Course):
         return annotated_problem_sets
 
     def problem_success_2(self):
+        """
+        Funkcija, ki naredi isto kot problem_success, le da podatke zbere hitreje in preko
+        AttemptQuerySeta. Komentar bo popravljen, ko bo funkcija problem_succes izbrisana.
+        """
         students = self.observed_students()
         attempts = Attempt.objects.filter(user__id__in=students).filter(
             part__problem__problem_set__course__id = self.id)
@@ -106,6 +111,41 @@ class Course(Course):
             except:
                 pass
         return annotated_problem_sets
+
+    def active(self, days):
+        """
+        Pripravi nam podatke za risanje grafov. Deluje enako kot funkcija problem_success_2, le da
+        nas tokrat zanimajo le učenci, ki so bili aktivni v zadnjih DAYS dneh. 
+        """
+        students = self.observed_students()
+        active_students = []
+        for student in students:
+            user_attempts = student.attempts.all().order_by('-submission_date')
+            if len(user_attempts) > 0:
+                latest = user_attempts[0]
+                if (datetime.now(timezone.utc) - latest.submission_date).days <= int(days):
+                    active_students.append(student.id)
+        attempts = Attempt.objects.filter(user__id__in=active_students).filter(
+            part__problem__problem_set__course__id = self.id)
+        success = attempts.problem_set_statistics()
+
+        # Ta del funkcije se ponavlja skoraj pri vsaki pripravi podatkov, smiselno bi ga bilo spraviti
+        # v svojo funkcijo. 
+        annotated_problem_sets = []
+        for problem_set in self.problem_sets.all():
+            try:
+                rezultati = [('Pravilnost', 'Pravilne rešitve', 'Napačne rešitve')]
+                for problem in success[problem_set]:
+                    rezultati.append((problem.title, 0, 0))
+                    for part in success[problem_set][problem]:
+                        rezultati.append(('', success[problem_set][problem][part]['valid'],
+                                         success[problem_set][problem][part]['invalid']))
+                problem_set.json = json.dumps(rezultati)
+                annotated_problem_sets.append(problem_set)
+            except:
+                pass
+        return annotated_problem_sets
+        
             
         
                 

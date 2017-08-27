@@ -9,9 +9,20 @@
 <div class="content-section-a tomo-top-section"><div class="container">
 {% filter latex_markdown %}
 
+
 <h2> {{course.title}} </h2>
 <p><h5> Število pravilnih/napačnih oddaj za posamezno podnalogo </h5></p>
 {% endfilter %}
+
+<h3> Izberi skupino, glede na katero bi želel imeti izrisane grafe </h3>
+
+{% for group in course.groups.all %}
+<li><a href='#'> {{group.title}} </a> <br>
+{% endfor %}
+<li><a href='{% url "course_graphs_active" course.pk 7 %}'> Aktivni zadnji teden </a> <br>
+<li><a href='{% url "course_graphs_active" course.pk 30%}'> Aktivni zadnji mesec </a> <br>
+<li><a href='{% url "course_graphs_active" course.pk 180%}'> Aktivni zadnjih 6 mesecev </a> <br>
+<li><a href='{% url "course_graphs_active" course.pk 365%}'> Aktivni zadnje leto </a> <br>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 {% for problem_set in annotated_problem_sets %}

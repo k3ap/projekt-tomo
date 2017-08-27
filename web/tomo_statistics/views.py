@@ -15,3 +15,10 @@ def user_success(request, course_pk):
     course = get_object_or_404(Course, pk=course_pk)
     json_data = json.dumps(course.statistika()['solved_atleast'])
     return render(request, 'tomo_statistics/user_success.html', {'json_data' : json_data})
+
+def course_graphs_active(request, course_pk, days):
+    course = get_object_or_404(Course, pk=course_pk)
+    return render(request, 'tomo_statistics/statistika_course.html', {
+        'annotated_problem_sets' : course.active(days=days),
+        'course' : course,
+    })
