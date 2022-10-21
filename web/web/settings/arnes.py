@@ -46,8 +46,8 @@ LOGIN_REDIRECT_URL = '/'
 SUBMISSION_URL = 'https://www.projekt-tomo.si'
 
 AUTHENTICATION_BACKENDS = (
-    'social.backends.google.GoogleOAuth2',
-    'social.backends.facebook.FacebookOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'shibboleth.backends.ShibbolethRemoteUserBackend',
 )
@@ -58,3 +58,4 @@ SOCIAL_AUTH_FACEBOOK_KEY = os.environ['SOCIAL_AUTH_FACEBOOK_KEY']
 SOCIAL_AUTH_FACEBOOK_SECRET = os.environ['SOCIAL_AUTH_FACEBOOK_SECRET']
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_USER_MODEL = 'users.User'
+SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.11'

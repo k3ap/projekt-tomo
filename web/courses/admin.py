@@ -23,6 +23,13 @@ class CourseAdmin(admin.ModelAdmin):
         GroupInline,
     )
 
+    def podvoji(self, request, queryset):
+        for course in queryset:
+            course.duplicate()
+
+    podvoji.short_description = 'Podvoji'
+
+    actions = [podvoji]
 
 class ProblemSetAdmin(admin.ModelAdmin):
     list_display = (

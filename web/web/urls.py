@@ -1,9 +1,10 @@
+from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
 from attempts.rest import AttemptViewSet
 from problems.rest import ProblemViewSet
-from courses.rest import CourseViewSet
+from courses.rest import ProblemSetViewSet, CourseViewSet
 from courses.views import homepage
 from utils.views import help, terms_of_service
 from users.views import mobile_app_token
@@ -14,6 +15,7 @@ from django.conf import settings
 router = DefaultRouter()
 router.register(r'attempts', AttemptViewSet, base_name='attempts')
 router.register(r'problems', ProblemViewSet, base_name='problems')
+router.register(r'problem_sets', ProblemSetViewSet, base_name='problem_sets')
 router.register(r'courses', CourseViewSet, base_name='courses')
 
 
@@ -23,7 +25,7 @@ urlpatterns = [
     url(r'^help$', help, name='help'),
     url(r'^help/students$', help, {'special': 'students'}, name='help_students'),
     url(r'^help/teachers$', help, {'special': 'teachers'}, name='help_teachers'),
-    url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('social_django.urls', namespace='social')),
     url(r'^accounts/', include([
         url(r'^login/$', django.contrib.auth.views.login, {'template_name': 'login.html'}, name='login'),
         url(r'^logout/$', django.contrib.auth.views.logout, name='logout'),
@@ -38,9 +40,7 @@ urlpatterns = [
 
 urlpatterns += courses.urls.urlpatterns
 
-
-if settings.DEBUG:
-    import debug_toolbar
+if 'silk' in settings.INSTALLED_APPS:
     urlpatterns += [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^silk/', include('silk.urls', namespace='silk')),
     ]

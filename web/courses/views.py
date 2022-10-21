@@ -116,11 +116,11 @@ def homepage(request):
     """Show a list of all problems in a problem set."""
     user_courses = []
     not_user_courses = []
-    for course in Course.objects.all():
+    for course in Course.objects.all().prefetch_related('students', 'teachers'):
         if request.user.is_favourite_course(course):
             user_courses.append(course)
             course.annotate_for_user(request.user)
-            course.annotated_problem_sets = course.annotated_problem_sets[-1:-4:-1]
+            course.annotated_problem_sets = [course for course in course.annotated_problem_sets if course.visible][-1:-4:-1]
         else:
             not_user_courses.append(course)
     return render(request, 'homepage.html', {

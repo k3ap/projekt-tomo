@@ -163,7 +163,6 @@
 
 
 import io, json, os, re, sys, shutil, traceback, urllib.error, urllib.request
-from contextlib import contextmanager
 
 
 {% include 'python/check.py' %}
@@ -202,4 +201,5 @@ def _validate_current_file():
 {% endfor %}
     Check.summarize()
 
-_validate_current_file()
+if __name__ == '__main__':
+    _validate_current_file()

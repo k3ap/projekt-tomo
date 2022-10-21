@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     'simple_history',
     'courses',
     'taggit',
-    'social.apps.django_app.default',
+    'social_django',
     'tomo_statistics',
 ]
 

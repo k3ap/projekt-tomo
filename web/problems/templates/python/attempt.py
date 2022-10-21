@@ -164,7 +164,6 @@
 
 
 import io, json, os, re, sys, shutil, traceback, urllib.error, urllib.request
-from contextlib import contextmanager
 
 
 {% include 'python/check.py' %}
@@ -273,4 +272,5 @@ def _validate_current_file():
             print("Če se datoteka v urejevalniku ni osvežila, jo zaprite ter ponovno odprite.")
     Check.summarize()
 
-_validate_current_file()
+if __name__ == '__main__':
+    _validate_current_file()
